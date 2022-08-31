@@ -10,8 +10,8 @@ function App() {
       </header>
       <h2>Counter Value is = {count}</h2>
       <button onClick={()=>setCount(0)}>Reset Counter</button>
-      <button onClick={()=>setCount(count + 1)}>Increase Counter</button>
-      <button onClick={()=>setCount(count - 1)}>Decrease Counter</button>
+      <button onClick={()=>(count>10? "" : setCount(count + 1))}>Increase Counter</button>
+      <button onClick={()=>(count<1? "" : setCount(count - 1))}>Decrease Counter</button>
     </div>
   );
 }
